@@ -3,17 +3,17 @@ name: Build React App and Deploy to deployOnWeb Branch
 on:
   push:
     branches:
-      - prod
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout prod branch
+      - name: Checkout main branch
         uses: actions/checkout@v3
         with:
-          ref: prod
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
